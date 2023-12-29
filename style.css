@@ -1,0 +1,154 @@
+/* SERVE PARA REMOVER TODOS OS ESPAÇAMENTOS PADRÃO DO GOOGLE*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* :root SERVE PARA CRIAR VARIÁVEIS QUE GUARDAM VALORES E PODEM SER CHAMADAS NO CÓDIGO */
+/* A VARIÁVEL SEMPRE DEVE COMEÇAR COM -- */
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter'
+}
+
+body {
+    /* AQUI ESTAMOS CHAMANDO A VARIÁVEL COR DE FUNDO */
+    /* UTILIZA-SE var(NOMEDAVARIAVEL) */
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* SERVE PARA DEIXAR CADA SEÇÃO COM 100% DE TAMANHO DA TELA */
+.container {
+    height: 100vh;
+    /* SERVE PARA SEPARAR OS CONTEÚDOS NA TELA EM LINHA OU EM COLUNA */
+    display: grid;
+    /* SERVE PARA CRIAR COLUNAS NO CONTEUDO DA DIV DEIXANDO 50% PRA CADA */
+    grid-template-columns: 50% 50%;
+}
+
+.principal {
+    /* SERVE PARA ADCIONAR UMA IMAGEM DE FUNDO */
+    background-image: url("img/Background.png");
+    /* SERVE PARA QUANDO A IMAGEM NÃO CONTINUAR MOSTRANDO NOVAMENTE QUANDO A TELA FOR MAIOR */
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* POR CONTA DO GRID COLUMNS CONSEGUE-SE ALINHAR OS ELEMTONS NO CENTRO DA PÁGINA */
+    align-items: center;
+    text-align: center;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    color: var(--branco-principal);
+    padding: 1em;
+    display: block;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: solid 2px var(--branco-principal);
+}
+
+.container__aviso {
+    color: var(--cinza-secundario);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+ }
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.descricao__titulo {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+}
+
+.dispositivos__listas {
+    /*DISPLAY FLEX SERVE PARA ORDENAR OS ITENS EM UMA LINHA AO INVÉS DE BLOCOS */
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0em;
+}
+
+.lista__item {
+    font-size: 32px;
+}
+
+.rodape {
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 1em;
+    margin: 2em 0em;
+}
+
+.lista__link a {
+    color: var(--branco-principal);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.rodape__texto {
+    font-family: var(--fonte-principal);
+    font-size: 14px;
+    color: var(--cinza-secundario);
+    margin: 2em 4em;
+}
